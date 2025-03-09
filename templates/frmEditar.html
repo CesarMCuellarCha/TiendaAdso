@@ -32,7 +32,7 @@
             <div class="mt-2">
                 <label for="txtPrecio" class="fw-bold">Categoria:</label>
                 <select name="cbCategoria" id="cbCategoria" 
-                class="form-select" value="{{producto[4]}}" required>
+                class="form-select" required>
                 <option value="">Seleccione</option>
                 <option value="Electrodomestico">Electrodomestico</option>
                 <option value="Ropa">Ropa</option>
@@ -41,7 +41,7 @@
             </div>
             <div class="mt-2">
                 <label for="fileFoto" class="fw-bold">Foto:</label>
-                <input type="file" name="fileFoto" id="fileFoto" 
+                <input type="file" name="fileFoto" id="fileFoto"  
                 class="form-control" onchange="mostrarImagen(event)">
             </div>
             <div class="mt-2 text-center">
@@ -58,8 +58,8 @@
     <script src="../static/js/app.js"></script>
 
     <script>
-        document.getElementById('cbCategoria').value='{{producto[4]}}'
-        document.getElementById('imagenProducto').src='../static/imagenes/{{producto[5]}}'
+        document.getElementById('cbCategoria').value='{{producto[5]}}'
+        document.getElementById('imagenProducto').src='../static/imagenes/{{producto[4]}}'
     </script>
 
     {% if mensaje %}
