@@ -7,7 +7,6 @@ function mostrarImagen(evento){
   }
 
   function eliminar(id){
-    alert(id)
     Swal.fire({
       title: 'Eliminar Producto',
       text: "¿Está seguro de eliminar?",

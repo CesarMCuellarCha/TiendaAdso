@@ -161,13 +161,11 @@ def eliminar(id):
         recibe mediante petición GET
     Args:
         id (_type_): int, id del producto
-
     Returns:
         _type_: lo redirecciona a la ruta raiz
     """
     if request.method == 'GET':
         try:
-            print("voy a eliminar")
             productoEliminar=(id,)
             cursor = miConexion.cursor()
             #datos para eliminar foto
@@ -182,7 +180,5 @@ def eliminar(id):
                 #eliminar el archivo fisicamente               
                 os.remove(rutaFoto)                
         except miConexion.Error as error:
-            miConexion.rollback()
-            mensaje="Problemas al eliminar"
-            
+            miConexion.rollback()            
     return redirect("/")

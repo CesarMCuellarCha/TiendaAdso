@@ -30,7 +30,7 @@
                 class="form-control" value="{{producto[2]}}" required>
             </div>
             <div class="mt-2">
-                <label for="txtPrecio" class="fw-bold">Precio:</label>
+                <label for="txtPrecio" class="fw-bold">Categoría:</label>
                 <select name="cbCategoria" id="cbCategoria" 
                 class="form-select" value="{{producto[3]}}" required>
                 <option value="">Seleccione</option>
@@ -41,15 +41,15 @@
             </div>
             <div class="mt-2">
                 <label for="fileFoto" class="fw-bold">Foto:</label>
-                <input type="file" name="fileFoto" id="fileFoto" 
+                <input type="file" name="fileFoto" id="fileFoto" accept="image/png, image/gif, image/jpeg"
                 class="form-control" onchange="mostrarImagen(event)" required>
             </div>
             <div class="mt-2 text-center">
                 <img id="imagenProducto" src="" alt="" width="80" height="80">
             </div>
             <div class="mt-2">
-                <button class="btn btn-success">Agregar</button>
-                <button class="btn btn-warning">Cancelar</button>
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <a href="/"><button type="button" class="btn btn-warning">Cancelar</button></a>
             </div>
         </form>
     </div>
